@@ -1,0 +1,635 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 300vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/*NAVIGATION BAR*/
+.navigationbar {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7%;
+  position: fixed;
+  z-index: 99;
+}
+.navigationbar .logo {
+  font-family: "Teko", sans-serif;
+  font-size: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navigationbar .logo span {
+  font-size: 25px;
+  padding-left: 10px;
+}
+.navigationbar .logo:hover {
+  font-family: "Teko", sans-serif;
+  font-size: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-shadow: 0 0 20px white, 0 0 20px white;
+}
+.navigationbar .navbar {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navigationbar a {
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  transition: 0.2s;
+}
+.navigationbar a:hover {
+  border-bottom: 1px white solid;
+}
+.navigationbar .searching {
+  width: 320px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.navigationbar .searching .search {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: rgb(255, 255, 255, 0.8);
+  color: white;
+  transition: 1s;
+}
+.navigationbar .searching .search:focus {
+  width: 280px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 1%;
+  background-color: rgb(255, 255, 255, 0);
+  color: white;
+  outline: 1px solid white;
+}
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: #ffff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/*HOME SECTION*/
+
+/*SLIDE ANIMATION START*/
+.sliderframe {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.slideimage {
+  width: 500%;
+  height: 100vh;
+  margin: 0 0 0 -400%;
+  display: flex;
+  position: relative;
+  -webkit-animation-name: slide-animation;
+  -webkit-animation-duration: 33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+.image-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+img {
+  width: 100%;
+  height: 100vh;
+}
+/*SLIDE ANIMATION END*/
+
+#home {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  padding: 20px 7%;
+}
+#home .title {
+  margin-top: 50px;
+  font-family: "Teko", sans-serif;
+  font-size: 45px;
+}
+
+.yel {
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+}
+.desc {
+  font-family: "Gotu", sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+.midbg {
+  width: 100%;
+  height: 250px;
+  background-image: url(Image/midbg.avif);
+  background-position: center;
+  background-size: cover;
+}
+
+/*PRODUCT SECTION*/
+.productsection {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  margin-top: 100vh;
+  padding: 20px 7%;
+}
+.headline {
+  font-family: "Teko", sans-serif;
+  margin-top: 50px;
+  font-size: 50px;
+  font-variant: small-caps;
+  border-bottom: 3px dotted black;
+}
+.wrapper {
+  width: 100%;
+  height: 75vh;
+  border-bottom: 3px dotted black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapdesc {
+  width: 49%;
+  height: 100%;
+  padding: 20px 3%;
+}
+.product-title {
+  margin-top: 40px;
+  font-family: "Teko", sans-serif;
+}
+.product-desc {
+  font-family: "Gotu", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+.choose {
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+  margin-top: 30px;
+}
+.colour-select {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+#green {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: green;
+}
+#grey {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: rgb(165, 164, 164);
+}
+#pink {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: pink;
+}
+.product-img {
+  width: 49%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-img {
+  width: 90%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img1 {
+  width: 400px;
+  height: 400px;
+  transform: translateX(0px);
+  background-image: url(Image/g6.avif);
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(15px 15px 20px);
+}
+.next-product {
+  width: 100%;
+  height: 180vh;
+  position: absolute;
+  margin-top: 200vh;
+  padding: 20px 7%;
+}
+.midbg2 {
+  width: 100%;
+  height: 100px;
+  background-image: url(Image/bg3.webp);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  margin-top: 200vh;
+  z-index: 2;
+}
+.container {
+  width: 100%;
+  height: 160vh;
+  background-color: black;
+  margin-top: 95px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  padding: 100px 3%;
+  justify-content: center;
+}
+.container h1:first-child {
+  color: white;
+  position: absolute;
+  margin-top: -80px;
+  font-family: "Teko", sans-serif;
+  font-size: 50px;
+  font-variant: small-caps;
+}
+.container h1:last-child {
+  color: white;
+  position: absolute;
+  margin-top: 870px;
+  font-family: "Teko", sans-serif;
+  font-size: 50px;
+  font-variant: small-caps;
+}
+.wrap {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 1%;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.5s ease-in;
+}
+.wrap img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.5s linear;
+  top: 40px;
+  left: 45px;
+}
+.wrap:hover img {
+  transform: scale(0.7) translateY(-120px);
+}
+
+.prod-brand {
+  position: absolute;
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  top: 220px;
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+.name {
+  position: absolute;
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  top: 250px;
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+.price {
+  position: absolute;
+  font-family: "Teko", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  top: 290px;
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+.wrap button {
+  margin-bottom: 0px;
+  width: 100%;
+  height: 70px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-variant: small-caps;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.1s ease-in;
+}
+button:active {
+  background-color: black;
+  color: white;
+}
+.wrap:hover {
+  background-image: linear-gradient(black, white);
+}
+.wrap:hover .prod-brand {
+  opacity: 1;
+  top: 200px;
+}
+.wrap:hover .name {
+  opacity: 1;
+  top: 230px;
+}
+.wrap:hover .price {
+  opacity: 1;
+  top: 270px;
+}
+.wrap:hover button {
+  opacity: 1;
+}
+
+/*MID BG SLIDE ANIMATION START*/
+.midbg3-sliderframe {
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  margin-top: 380vh;
+}
+
+.midbg3slideimage {
+  width: 500%;
+  height: 20vh;
+  margin: 0 0 0 -400%;
+  display: flex;
+  position: relative;
+  -webkit-animation-name: slide-animation;
+  -webkit-animation-duration: 33s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+.midbg3-container {
+  height: 20vh;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+.midbackground {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+}
+/*MID BG SLIDE ANIMATION END*/
+
+/*CONTACT*/
+#contact {
+  width: 100%;
+  height: 80vh;
+  margin-top: 20px;
+}
+
+.contact-section {
+  width: 100%;
+  height: 250px;
+  padding: 25px 7%;
+  display: flex;
+  justify-content: center;
+}
+.contactus {
+  width: 50%;
+  height: 500px;
+  background-color: black;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 0px 5%;
+}
+.contactus h1 {
+  margin-top: 30px;
+  font-family: "Obligue", sans-serif;
+  font-size: 30px;
+  flex-direction: row;
+  text-align: center;
+  color: white;
+}
+.contactus label {
+  font-family: "Gotu", sans-serif;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 8px;
+}
+
+.contactus input {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  padding: 2%;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-bottom: solid 1px white;
+  color: black;
+  transition: 0.5s;
+}
+
+input:focus {
+  background-color: transparent;
+  border-bottom: solid white 1px;
+  color: white;
+}
+.sosicon {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 10px;
+}
+.sosicon .facebook {
+  width: 10%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.sosicon .feather {
+  width: 30px;
+  height: 30px;
+  stroke: #ffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 99;
+}
+.sosicon .feather:hover {
+  width: 30px;
+  height: 30px;
+  stroke: #ffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+  fill: none;
+}
+
+.contactbtn {
+  text-align: center;
+  margin-top: 40px;
+}
+h6 {
+  font-size: 20px;
+  color: white;
+  font-family: "Gotu", sans-serif;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.massage {
+  width: 100%;
+  height: 100px;
+  padding: 1%;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-size: 15px;
+}
+.massage:focus {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+  border-bottom: 1px solid white;
+}
+.send {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  font-family: "Obligue", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.send:active {
+  outline: white solid 1px;
+}
+
+.navbarcontact {
+  width: 100%;
+  height: 10vh;
+  margin-top: 300px;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 7%;
+  z-index: 99;
+}
+
+.navbarcontact .logo {
+  font-family: "Teko", sans-serif;
+  font-size: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navbarcontact .logo span {
+  font-size: 25px;
+  padding-left: 10px;
+}
+.navbarcontact .logo:hover {
+  font-family: "Teko", sans-serif;
+  font-size: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-shadow: 0 0 20px white, 0 0 20px white;
+}
+/*ANIMATION SLIDE*/
+@-webkit-keyframes slide-animation {
+  0% {
+    left: 0%;
+  }
+  10% {
+    left: 0%;
+  }
+  20% {
+    left: 100%;
+  }
+  30% {
+    left: 200%;
+  }
+  40% {
+    left: 300%;
+  }
+  50% {
+    left: 400%;
+  }
+  60% {
+    left: 400%;
+  }
+  70% {
+    left: 300%;
+  }
+  80% {
+    left: 200%;
+  }
+  90% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+/*ANIMATION FLOAT*/
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
